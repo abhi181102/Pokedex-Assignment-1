@@ -46,3 +46,12 @@ async function fetchPokemonData(pokemonName) {
     console.error("Error fetching Pokémon data:", error);
   }
 }
+function displayPokemonDetails(data) {
+  const pokemonCard = document.getElementById("pokemonCard");
+  pokemonCard.classList.remove("hidden");
+  pokemonCard.innerHTML = `
+    <h2>${data.name.toUpperCase()}</h2>
+    <img src="${data.sprites.front_default}" alt="${data.name}" />
+    <p>Type: ${data.types.map((t) => t.type.name).join(", ")}</p>
+  `;
+}
