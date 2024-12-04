@@ -55,3 +55,14 @@ function displayPokemonDetails(data) {
     <p>Type: ${data.types.map((t) => t.type.name).join(", ")}</p>
   `;
 }
+document.getElementById("getWeather").addEventListener("click", async () => {
+  const location = document.getElementById("location").value.trim();
+  if (!location) return alert("Please enter a city!");
+
+  const weather = await fetchWeatherData(location);
+  if (weather) {
+    const type = suggestPokemonBasedOnWeather(weather);
+    const pokemon = await fetchPokemonData(type);
+    displayPokemonDetails(pokemon);
+  }
+});
