@@ -21,3 +21,12 @@ header h1 {
   color: #ff3e3e;
   text-align: center;
 }
+@media screen and (max-width: 768px) {
+  .app-container {
+    width: 100%;
+    padding: 15px;
+  }
+  input {
+    width: 100%;
+  }
+}

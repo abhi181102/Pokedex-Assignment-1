@@ -4,21 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pokémon Finder with Weather</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-  <div class="app-container">
-    <header>
-      <h1>Pokémon Finder with Weather</h1>
-    </header>
-    <section class="search-section">
-      <input type="text" id="location" placeholder="Enter city name" />
-      <button id="getWeather">Get Weather & Suggest Pokémon</button>
-    </section>
-    <section id="content">
-      <div id="weatherCard" class="card hidden"></div>
-      <div id="pokemonCard" class="card hidden"></div>
-    </section>
-  </div>
-</body>
+    <div class="app-container">
+      <!-- Header Section -->
+      <header>
+        <h1>Pokémon Finder with Weather</h1>
+      </header>
 
+      <!-- Search Section -->
+      <section class="search-section">
+        <input type="text" id="location" placeholder="Enter city name" />
+        <button id="getWeather">Get Weather & Suggest Pokémon</button>
+      </section>
+
+      <!-- Dynamic Content Section -->
+      <section id="content">
+        <!-- Weather Card -->
+        <div id="weatherCard" class="card hidden">
+          <!-- Weather details will appear here -->
+        </div>
+
+        <!-- Pokémon Card -->
+        <div id="pokemonCard" class="card hidden">
+          <!-- Pokémon details will appear here -->
+        </div>
+      </section>
+    </div>
+
+    <!-- Link to external JavaScript -->
+    <script src="./index.js"></script>
+  </body>
 </html>
