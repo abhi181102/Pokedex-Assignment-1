@@ -3,7 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome to World of Pokemon</title>
+    <title>Pokémon Finder with Weather</title>
   </head>
-  <body></body>
+  <body>
+  <div class="app-container">
+    <header>
+      <h1>Pokémon Finder with Weather</h1>
+    </header>
+    <section class="search-section">
+      <input type="text" id="location" placeholder="Enter city name" />
+      <button id="getWeather">Get Weather & Suggest Pokémon</button>
+    </section>
+    <section id="content">
+      <div id="weatherCard" class="card hidden"></div>
+      <div id="pokemonCard" class="card hidden"></div>
+    </section>
+  </div>
+</body>
+
 </html>
