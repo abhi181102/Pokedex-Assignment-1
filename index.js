@@ -16,3 +16,12 @@ document.getElementById("getWeather").addEventListener("click", () => {
   const location = document.getElementById("location").value.trim();
   console.log("City entered:", location);
 });
+function displayWeatherDetails(data) {
+  const weatherCard = document.getElementById("weatherCard");
+  weatherCard.classList.remove("hidden");
+  weatherCard.innerHTML = `
+    <h2>Weather in ${data.name}</h2>
+    <p>Condition: ${data.weather[0].description}</p>
+    <p>Temperature: ${data.main.temp}°C</p>
+  `;
+}
