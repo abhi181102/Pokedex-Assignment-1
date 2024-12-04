@@ -1,32 +1,202 @@
+/* General Reset */
+html,
 body {
   margin: 0;
+  padding: 0;
+  height: 100%;
   font-family: Arial, sans-serif;
+  background-color: #f0f8ff; /* Soft background color */
+  color: #333; /* Default text color */
+}
+
+/* Background Styling */
+body {
+  background-image: url("./images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  background-color: #f0f8ff;
+  flex-direction: column;
 }
 
+/* App Container */
 .app-container {
-  max-width: 800px;
   width: 90%;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   padding: 20px;
-}
-
-header h1 {
-  color: #ff3e3e;
+  margin: 20px;
   text-align: center;
 }
+
+/* Header */
+header h1 {
+  font-size: 2rem;
+  color: #ff3e3e;
+  margin-bottom: 20px;
+}
+
+/* Search Section */
+.search-section {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+  font-size: 1rem;
+  width: 70%;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #ff3e3e;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #e02d2d;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Weather Details Section */
+#weatherCard {
+  margin-top: 20px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+}
+
+#weatherCard img {
+  width: 50px;
+  height: 50px;
+  margin: 10px 0;
+}
+
+#weatherCard h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+#weatherCard p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+/* Pokémon Details Section */
+#pokemonCard {
+  margin-top: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.pokedex-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.pokedex-data img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+}
+
+.pokedex-info h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.pokedex-info p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+/* Stats Section */
+.stats-section {
+  margin-top: 20px;
+}
+
+.stats-section h2 {
+  font-size: 1.5rem;
+  color: #ff3e3e;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.stats-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.stats-bar span {
+  flex: 1;
+  text-align: right;
+  margin-right: 10px;
+  font-size: 0.9rem;
+}
+
+.stats-bar div {
+  flex: 4;
+  height: 15px;
+  background: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.stats-bar div span {
+  display: block;
+  height: 100%;
+  background-color: #4caf50;
+  width: 0%; /* Animates stat bar growth */
+  transition: width 0.5s ease;
+}
+
+/* Responsive Design */
 @media screen and (max-width: 768px) {
-  .app-container {
-    width: 100%;
-    padding: 15px;
-  }
   input {
-    width: 100%;
+    width: 60%;
+  }
+
+  .pokedex-data img {
+    width: 120px;
+    height: 120px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+
+  input {
+    font-size: 0.9rem;
   }
 }
+
