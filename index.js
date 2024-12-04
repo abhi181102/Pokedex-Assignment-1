@@ -25,3 +25,12 @@ function displayWeatherDetails(data) {
     <p>Temperature: ${data.main.temp}°C</p>
   `;
 }
+function suggestPokemonBasedOnWeather(weather) {
+  const weatherToType = {
+    rain: "water",
+    clear: "fire",
+    clouds: "electric",
+    snow: "ice",
+  };
+  return weatherToType[weather] || "normal";
+}
