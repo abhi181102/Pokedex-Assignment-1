@@ -34,3 +34,15 @@ function suggestPokemonBasedOnWeather(weather) {
   };
   return weatherToType[weather] || "normal";
 }
+const pokeApiBaseUrl = "https://pokeapi.co/api/v2/pokemon/";
+
+async function fetchPokemonData(pokemonName) {
+  const url = `${pokeApiBaseUrl}${pokemonName}`;
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    console.log("Pokémon data:", data);
+  } catch (error) {
+    console.error("Error fetching Pokémon data:", error);
+  }
+}
